@@ -1,14 +1,14 @@
 # docsify-plugin-asciinema
 
-Simple asciinema plugin for docsify.
+Simple [asciinema](https://asciinema.org/) plugin for docsify.
 
-You can include a asciinema player with image syntax
+You can include a asciinema play with image syntax.
 
 ```
 ![mydemo](demos/demo1.cast "Demo 1: My asciinema demo.")
 ```
 
-This plugin renders
+This plugin renders to
 
 ```
 <div id="mydemo" class="asciinema">
