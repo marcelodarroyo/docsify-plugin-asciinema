@@ -8,7 +8,15 @@ You can include a asciinema player with image syntax
 ![mydemo](demos/demo1.cast "Demo 1: My asciinema demo.")
 ```
 
-This plugin insert asciinema player in place of image in markdown.
+This plugin renders
+
+```
+<div id="mydemo" class="asciinema">
+  <p>Demo 1: My asciinema demo.</p>
+</div>
+``` 
+
+The plugin will process all `.asciinema` elements with the javascript player to play the recorded terminal commands.
 
 ## Usage
 
