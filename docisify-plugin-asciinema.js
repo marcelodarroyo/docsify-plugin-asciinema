@@ -16,6 +16,7 @@
     $docsify.plugins = [].concat(asciinemaPlugin, $docsify.plugins || []);
 
     // add docsify markdown image renderer to generate an asciinema element
+    let oldImgRenderer = marked.renderer.image;
     $docsify.markdown.renderer.image = function(href, title, text) {
       if (href.endsWith('.cast')) {
           // generate div for asciinema player
@@ -23,6 +24,6 @@
           let html = `<div ${attrs} class="asciinema"></div>\n`;
           return html + `<p class="caption">${title}</p>\n`;
       }
-      return false;
+      return oldImgRenderer(href, title, text);
     }
   })();
